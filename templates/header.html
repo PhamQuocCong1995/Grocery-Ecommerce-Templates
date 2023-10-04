@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- More -->
-        <button class="top-bar__more">
+        <button class="top-bar__more js-toggle" toggle-target="#navbar">
             <img src="./assets/icon/more.svg" alt="" class="icon top-bar__more-icon" />
         </button>
 
@@ -12,10 +12,13 @@
         </a>
 
         <!-- Navbar -->
-        <nav class="navbar">
+        <nav id="navbar" class="navbar hide">
+            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+                <img src="./assets/icon/back-arrow.svg" alt="" />
+            </button>
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
-                    <a href="" class="navbar__link"
+                    <a href="#!" class="navbar__link"
                         >Departments
                         <img src="./assets/icon/arrow-down.svg" alt="" class="icon navbar__arrow" />
                     </a>
@@ -3901,7 +3904,7 @@
                     </div>
                 </li>
                 <li class="navbar__item">
-                    <a href="" class="navbar__link"
+                    <a href="#!" class="navbar__link"
                         >Grocery
                         <img src="./assets/icon/arrow-down.svg" alt="" class="icon navbar__arrow" />
                     </a>
@@ -4245,7 +4248,7 @@
                     </div>
                 </li>
                 <li class="navbar__item">
-                    <a href="" class="navbar__link"
+                    <a href="#!" class="navbar__link"
                         >Beauty
                         <img src="./assets/icon/arrow-down.svg" alt="" class="icon navbar__arrow" />
                     </a>
@@ -4523,6 +4526,9 @@
                 </li>
             </ul>
         </nav>
+
+        <!-- Navbar responsive overlay -->
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
 
         <!-- Action -->
         <div class="top-act">
