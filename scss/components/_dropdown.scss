@@ -7,6 +7,13 @@
     padding-top: 54px;
     display: none;
 
+    @include abstracts.breakpoint(lg) {
+        display: block;
+        position: initial;
+
+        padding-top: 0;
+    }
+
     &__inner {
         --inner-padding: 30px;
 
@@ -24,6 +31,18 @@
             translate: -50%;
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakpoint(lg) {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+
+            padding: 0 40px;
+
+            &::before {
+                content: none;
+            }
+        }
     }
 }
 
@@ -32,6 +51,7 @@
     --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
 
     position: relative;
+
     &__main {
         width: var(--main-column-width);
         height: var(--max-inner-height);
@@ -44,6 +64,12 @@
         &::-webkit-scrollbar {
             display: none;
         }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -55,6 +81,10 @@
         margin-top: 22px;
     }
 
+    @include abstracts.breakpoint(lg) {
+        margin-top: 10px;
+    }
+
     &__icon {
         position: relative;
         flex-shrink: 0;
@@ -63,6 +93,10 @@
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
         }
 
         &-1 {
@@ -92,10 +126,18 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 26px;
+        }
     }
 
     &__list {
         margin-top: 19px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -137,6 +179,14 @@
 
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+
+        grid-template-columns: 1fr;
+
+        padding-left: 0;
     }
 
     &--not-main {
