@@ -13,9 +13,23 @@
 
         <!-- Navbar -->
         <nav id="navbar" class="navbar show">
-            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+            <!-- Back -->
+            <button class="navbar__close-btn icon js-toggle" toggle-target="#navbar">
                 <img src="./assets/icon/back-arrow.svg" alt="" />
             </button>
+
+            <a href="#!" class="nav-btn icon d-none d-md-flex">
+                <img src="./assets/icon/cart.svg" alt="Icon Cart" class="nav-btn__icon" />
+                <span class="nav-btn__title">Card</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
+
+            <a href="#!" class="nav-btn icon d-none d-md-flex">
+                <img src="./assets/icon/heart.svg" alt="Icon Cart" class="nav-btn__icon" />
+                <span class="nav-btn__title">Favorite</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
+
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link"
