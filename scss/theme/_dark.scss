@@ -12,7 +12,7 @@ html.dark {
     --top-act-group-separate: #ededf6;
 
     // Breakpoint header
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
