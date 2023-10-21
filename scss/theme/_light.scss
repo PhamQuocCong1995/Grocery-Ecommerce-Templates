@@ -7,6 +7,10 @@ html {
 
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
+    // Footer
+    --footer-bg-color: var(--header-bg-color);
+    --footer-text-color: #9e9da6;
+
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
@@ -22,11 +26,11 @@ html {
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
     --top-menu-border-color: #d2d1d6;
 
-    //Sidebar
+    // Sidebar
     --sidebar-bg-color: #fff;
     --sidebar-shadow-color: rgba(200, 200, 200, 0.4);
 
-    //Category item
+    // Category item
     --cate-item-bg: #eee;
     --cate-item-thumb-bg: #fff;
     --cate-item-title-color: #000;
@@ -35,11 +39,11 @@ html {
         --cate-item-bg: #fff;
     }
 
-    //Filter button
+    // Filter button
     --filter-btn-text-color: #6c6c72;
     --filter-btn-bg: #fff;
 
-    //Product card
+    // Product card
     --product-card-bg: #fff;
     --product-card-shadow: rgba(237, 237, 246, 0.2);
     --like-btn-bg: #fff;
