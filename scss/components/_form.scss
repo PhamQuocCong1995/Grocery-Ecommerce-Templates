@@ -1,0 +1,127 @@
+.form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__group {
+        margin-top: 30px;
+
+        &--inline {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: red;
+            background: rgba($color: red, $alpha: 0.1);
+        }
+
+        .form__error,
+        .form__input-icon-error {
+            display: block;
+        }
+
+        .form__input-icon {
+            display: none;
+        }
+    }
+
+    &__text-input {
+        display: flex;
+        align-items: center;
+
+        height: 50px;
+        padding: 0 12px;
+        border-radius: 10px;
+        border: 2px solid var(--form-text-color);
+
+        &:focus-within {
+            border-color: #77dae6;
+        }
+    }
+
+    &__input {
+        flex: 1;
+        height: 100%;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        &::placeholder {
+            color: var(--form-text-color);
+        }
+
+        &-icon {
+            margin-left: 12px;
+
+            &-error {
+                display: none;
+                margin-left: 12px;
+                animation: shake 0.8s;
+            }
+        }
+    }
+
+    &__error {
+        display: none;
+        color: red;
+        font-size: 1.4rem;
+        text-align: left;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    &__pull-right {
+        margin-left: auto;
+    }
+
+    &__checkbox {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        &-label {
+            color: var(--checkbox-label-color);
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+            margin-left: 30px;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+        }
+
+        &::before {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1.5px solid #9e9da8;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            border-color: #ffb700;
+            background: #ffb700;
+        }
+
+        &::after {
+            width: 16px;
+            height: 8px;
+            border: 2px solid;
+            border-color: transparent transparent #fff #fff;
+            rotate: -45deg;
+            top: 4px;
+            left: 2px;
+        }
+    }
+}

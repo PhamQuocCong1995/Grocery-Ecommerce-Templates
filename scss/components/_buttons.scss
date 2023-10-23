@@ -44,6 +44,11 @@
 
 // Buttons
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
     height: 46px;
 
     background: #f8f8fb;
@@ -57,7 +62,9 @@
     user-select: none;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn-no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {
@@ -72,7 +79,7 @@
     }
 
     &--outline {
-        border-radius: 10px;
+        border: 1px solid #d3d1d6;
         background: transparent;
     }
 

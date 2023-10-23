@@ -51,4 +51,9 @@ html.dark {
     --filter-tag-bg: #171c28;
     --filter-form-arrow: brightness(0) saturate(100%) invert(15%) sepia(10%) saturate(1207%) hue-rotate(183deg)
         brightness(99%) contrast(91%);
+
+    // Sign up
+    --auth-content-bg: #292e39;
+    --checkbox-label-color: #b9babe;
+    --form-text-color: #b9babe;
 }
