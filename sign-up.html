@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,7 +54,15 @@
                     <form action="./index-login.html" class="form auth__form">
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="email" name="" id="" class="form__input" placeholder="Email" required />
+                                <input
+                                    type="email"
+                                    name=""
+                                    id=""
+                                    class="form__input"
+                                    value="admin@grocerymart.com"
+                                    placeholder="Email"
+                                    required
+                                />
                                 <img src="./assets/icon/message.svg" alt="" class="form__input-icon" />
                                 <img src="./assets/icon/form-warning.svg" alt="" class="form__input-icon-error" />
                             </div>
@@ -68,6 +76,7 @@
                                     name=""
                                     id=""
                                     class="form__input"
+                                    value="111111111"
                                     placeholder="Password"
                                     required
                                     minlength="6"
@@ -85,6 +94,7 @@
                                     name=""
                                     id=""
                                     class="form__input"
+                                    value="111111111"
                                     placeholder="Confirm Password"
                                     required
                                     minlength="6"
@@ -97,7 +107,7 @@
 
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" checked />
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
                                 <span class="form__checkbox-label">Set as default card</span>
                             </label>
 
@@ -107,7 +117,7 @@
                         <div class="form__group auth__btn-group">
                             <button class="btn btn--primary auth__btn form__submit-btn">Sign Up</button>
                             <button class="btn btn--outline btn-no-margin auth__btn">
-                                <img src="./assets/icon/google.svg" alt="" class="btn__icon" />
+                                <img src="./assets/icon/google.svg" alt="" class="btn__icon icon" />
                                 Sign in with Google
                             </button>
                         </div>

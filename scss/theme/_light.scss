@@ -53,8 +53,16 @@ html {
     --filter-form-shadow: rgba(200, 200, 200, 0.4);
     --filter-tag-bg: #f8f8fb;
 
-    // Sign up
+    // Auth
     --auth-content-bg: #fff;
+    --auth-text-color: #9e9da8;
+
+    @include abstracts.screen(md) {
+        --auth-intro-bg: #fff;
+    }
+
+    // Form
     --checkbox-label-color: #9e9da8;
-    --form-text-color: #d2d1d6;
+    --form-placeholder-color: #d2d1d6;
+    --form-border-color: #d2d1d6;
 }
