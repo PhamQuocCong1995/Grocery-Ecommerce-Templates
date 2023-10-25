@@ -26,7 +26,7 @@
         background: var(--auth-intro-bg);
 
         &-img {
-            max-width: 100%;
+            width: min(424px, 100%);
         }
 
         &-text {
@@ -122,6 +122,10 @@
         @include abstracts.screen(md) {
             margin-top: 10px;
         }
+
+        &-forgot-password {
+            margin-top: 0;
+        }
     }
 
     &__link {
@@ -172,5 +176,9 @@
             margin-top: 40px;
             font-size: 1.6rem;
         }
+    }
+
+    &__message {
+        margin-top: 30px;
     }
 }
