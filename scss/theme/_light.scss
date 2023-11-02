@@ -7,6 +7,7 @@ html {
 
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
+
     // Footer
     --footer-bg-color: var(--header-bg-color);
     --footer-text-color: #9e9da6;
@@ -68,8 +69,23 @@ html {
 
     // Product detail
     --product-detail-page: #fff;
+    --product-detail-info-bg: #f6f6f6;
+    --prod-info-total-price-color: #000;
+    --product-detail-tag-bg: #ededf6;
+
+    @include abstracts.screen(md) {
+        --product-detail-page: #fafafd;
+        --product-detail-info-bg: #fff;
+    }
+
+    // Search bar
+    --search-bar-bg: #fff;
 
     // Breadcrumbs
     --breadcrumbs-bg: #f6f6f6;
     --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
+
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #fff;
+    }
 }

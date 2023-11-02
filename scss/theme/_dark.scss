@@ -68,6 +68,18 @@ html.dark {
 
     // Product detail
     --product-detail-page: #292e39;
+    --product-detail-info-bg: #171c28;
+    --prod-info-total-price-color: #eee;
+    --prod-info-cart-color: #eee;
+    --product-detail-info-content-bg: transparent;
+    --product-detail-tag-bg: #292e39;
+
+    @include abstracts.screen(md) {
+        --product-detail-info-content-bg: #171c28;
+    }
+
+    // Search bar
+    --search-bar-bg: #171c28;
 
     // Breadcrumbs
     --breadcrumbs-bg: #171c28;
