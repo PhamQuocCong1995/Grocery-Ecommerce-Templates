@@ -22,6 +22,10 @@ html {
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
 
+    // Act dropdown
+    --act-dropdown-bg: #fff;
+    --act-dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+
     // Dropdown
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
@@ -91,4 +95,11 @@ html {
 
     // Review card
     --review-card-bg: #fafafd;
+
+    @include abstracts.screen(md) {
+        --review-card-bg: #fff;
+    }
+
+    // Text content
+    --text-content-hr-bg: #ebebeb;
 }

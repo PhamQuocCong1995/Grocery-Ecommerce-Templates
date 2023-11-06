@@ -16,6 +16,10 @@ html.dark {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
+    // Act dropdown
+    --act-dropdown-bg: #292e39;
+    --act-dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+
     // Dropdown
     --dropdown-bg-color: #2f3441;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
@@ -87,4 +91,7 @@ html.dark {
 
     // Review card
     --review-card-bg: #171c28;
+
+    // Text content
+    --text-content-hr-bg: #414349;
 }
