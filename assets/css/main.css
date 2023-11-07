@@ -1350,8 +1350,9 @@ html.dark {
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
-  --act-dropdown-bg: #292e39;
+  --act-dropdown-bg: #2f3441;
   --act-dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+  --act-dropdown-border-color: #171c28;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(19%) sepia(7%) saturate(1491%) hue-rotate(186deg)
@@ -1420,6 +1421,7 @@ html {
   --top-act-group-separate: #ededf6;
   --act-dropdown-bg: #fff;
   --act-dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+  --act-dropdown-border-color: #d2d1d6;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
@@ -1693,8 +1695,13 @@ html {
 .top-act__group--alone .top-act__btn {
   padding: 13px;
 }
-.top-act__btn {
+.top-act__btn-wrap {
   position: relative;
+}
+.top-act__btn-wrap:hover .act-dropdown {
+  display: block;
+}
+.top-act__btn {
   padding: 13px 20px;
   gap: 10px;
   cursor: pointer;
@@ -1740,15 +1747,25 @@ html {
 
 .act-dropdown {
   position: absolute;
-  top: 60px;
-  right: -60px;
   min-width: min(500px, 100vw);
+  top: 48px;
+  right: -60px;
+  padding-top: 28px;
+  display: none;
 }
 .act-dropdown__inner {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   background: var(--act-dropdown-bg);
   box-shadow: 0px 40px 90px 20px var(--act-dropdown-shadow-color);
+}
+.act-dropdown__arrow {
+  position: absolute;
+  top: -16.5px;
+  right: 104px;
+  height: 20.5px;
+  filter: var(--filter-form-arrow);
 }
 .act-dropdown__list {
   padding-bottom: 10px;
@@ -1776,7 +1793,12 @@ html {
   padding: 20px 0;
   border-width: 1px 0 1px;
   border-style: solid;
-  border-color: #d2d1d6;
+  border-color: var(--act-dropdown-border-color);
+}
+.act-dropdown__separate {
+  height: 1px;
+  background: var(--act-dropdown-border-color);
+  margin: 20px 0;
 }
 .act-dropdown__row {
   display: flex;
@@ -1809,6 +1831,7 @@ html {
   position: relative;
   padding-top: 100%;
   border: 1px solid #ebebeb;
+  border-radius: 10px;
 }
 .cart-review-item__thumb {
   position: absolute;
