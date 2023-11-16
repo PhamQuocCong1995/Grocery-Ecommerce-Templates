@@ -25,8 +25,16 @@
     background: var(--checkout-cart-info-bg);
     box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow-color);
 
+    @include abstracts.screen(md) {
+        padding: 16px;
+    }
+
     &__list {
         margin-top: -30px;
+
+        @include abstracts.screen(md) {
+            margin-top: -16px;
+        }
     }
 
     &__bottom {
@@ -68,6 +76,10 @@
 
         margin-top: 10px;
 
+        @include abstracts.screen(md) {
+            margin-top: 12px;
+        }
+
         &--bold {
             font-size: 2.2rem;
             font-weight: 700;
@@ -79,6 +91,10 @@
         height: 1px;
         background: #d2d1d6;
         margin: 30px 0 30px;
+
+        @include abstracts.screen(md) {
+            margin: 12px 0 12px;
+        }
     }
 
     &__sub-label {
@@ -87,6 +103,10 @@
 
     &__next-btn {
         margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 16px;
+        }
     }
 }
 
@@ -100,10 +120,34 @@
     padding: 30px 0;
     border-bottom: 1px solid #d2d1d6;
 
+    @include abstracts.screen(md) {
+        gap: 16px;
+        padding: 16px 0;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
     &__thumb {
         width: 172px;
         height: 172px;
         object-fit: contain;
+
+        @include abstracts.screen(xxl) {
+            width: 150px;
+            height: 150px;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include abstracts.screen(md) {
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &__content {
@@ -119,6 +163,14 @@
             display: flex;
             flex-direction: column;
         }
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+
+            &-right {
+                margin-top: 16px;
+            }
+        }
     }
 
     &__title,
@@ -129,7 +181,7 @@
     }
 
     &__title {
-        width: 374px;
+        max-width: 374px;
     }
 
     &__price-wrap {
@@ -147,6 +199,14 @@
         margin-top: auto;
         gap: 20px;
         min-height: 44px;
+
+        &--md-block {
+            @include abstracts.screen(md) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
     }
 
     &__input {
@@ -170,6 +230,11 @@
         font-weight: 700;
         line-height: 145.455%;
         text-align: right;
+
+        @include abstracts.screen(md) {
+            text-align: left;
+            font-size: 1.8rem;
+        }
     }
 
     &__ctrl-btn {
