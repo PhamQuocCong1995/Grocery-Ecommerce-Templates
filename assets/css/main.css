@@ -1398,6 +1398,8 @@ html.dark {
   --text-content-hr-bg: #414349;
   --checkout-cart-info-bg: #171c28;
   --checkout-cart-info-shadow-color: rgba(23, 28, 40, 0.2);
+  --checkout-breadcrumbs-bg: #171c28;
+  --checkout-border-color: #292e39;
   --gift-item-bg: #292e39;
   --gift-item-shadow-color: rgba(23, 28, 40, 0.2);
 }
@@ -1458,6 +1460,8 @@ html {
   --text-content-hr-bg: #ebebeb;
   --checkout-cart-info-bg: #fff;
   --checkout-cart-info-shadow-color: rgba(237, 237, 246, 0.2);
+  --checkout-breadcrumbs-bg: #fff;
+  --checkout-border-color: #d2d1d6;
   --gift-item-bg: rgb(116, 66, 224, 0.2);
   --gift-item-shadow-color: rgba(237, 237, 246, 0.2);
 }
@@ -2431,9 +2435,12 @@ html {
 .btn + .btn:not(.btn-no-margin) {
   margin-left: 20px;
 }
+.btn--small {
+  height: 40px;
+  padding: 0 16px;
+}
 .btn--text {
   font-weight: 400;
-  color: #9e9da8;
   background: transparent;
 }
 .btn--primary {
@@ -3088,6 +3095,45 @@ html {
   margin: 40px 0;
 }
 
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.dialog__content {
+  position: relative;
+  max-width: min(450px, 100% - 40px);
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  z-index: 1;
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .dialog__btn {
+    flex: 1;
+  }
+}
+
 .home {
   margin-bottom: 50px;
 }
@@ -3559,7 +3605,7 @@ html {
   padding-bottom: 50px;
 }
 .checkout-page__breadcrumbs {
-  background: #fff;
+  background: var(--checkout-breadcrumbs-bg);
 }
 
 .checkout-container {
@@ -3633,7 +3679,7 @@ html {
 }
 .cart-info__separate {
   height: 1px;
-  background: #d2d1d6;
+  background: var(--checkout-border-color);
   margin: 30px 0 30px;
 }
 @media (max-width: 767.98px) {
@@ -3661,7 +3707,7 @@ html {
   display: flex;
   gap: 30px;
   padding: 30px 0;
-  border-bottom: 1px solid #d2d1d6;
+  border-bottom: 1px solid var(--checkout-border-color);
 }
 @media (max-width: 767.98px) {
   .cart-item {
@@ -3766,6 +3812,7 @@ html {
   .cart-item__total-price {
     text-align: left;
     font-size: 1.8rem;
+    margin-bottom: 16px;
   }
 }
 .cart-item__ctrl-btn {

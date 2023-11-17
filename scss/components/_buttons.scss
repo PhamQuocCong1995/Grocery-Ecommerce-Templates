@@ -67,9 +67,13 @@
         }
     }
 
+    &--small {
+        height: 40px;
+        padding: 0 16px;
+    }
+
     &--text {
         font-weight: 400;
-        color: #9e9da8;
         background: transparent;
     }
 
