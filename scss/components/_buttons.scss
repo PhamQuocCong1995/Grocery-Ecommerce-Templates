@@ -59,10 +59,11 @@
     font-weight: 500;
 
     border-radius: 6px;
+    white-space: nowrap;
     user-select: none;
 
     + .btn {
-        &:not(.btn-no-margin) {
+        &:not(.btn--no-margin) {
             margin-left: 20px;
         }
     }
