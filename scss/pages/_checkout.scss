@@ -308,6 +308,19 @@
     &__top {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__add-btn {
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
     }
 
     &__title {
@@ -321,10 +334,6 @@
         font-weight: 400;
         line-height: 146.667%;
         margin-top: 4px;
-    }
-
-    &__add-btn {
-        margin-left: auto;
     }
 
     &__list {
@@ -343,7 +352,12 @@
 
 .address-card {
     display: flex;
+    gap: 16px;
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
 
     &__left {
         display: flex;
@@ -358,17 +372,26 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__desc {
+        max-width: min(518px, 100%);
         font-size: 1.5rem;
         font-weight: 400;
         line-height: 146.667%;
+        margin-top: 4px;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__list {
         display: flex;
-        align-items: center;
         gap: 30px;
 
         font-size: 1.4rem;
@@ -380,6 +403,15 @@
 
         &-item {
             margin-left: 8px;
+        }
+
+        @include abstracts.screen(md) {
+            margin-top: 16px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 16px;
         }
     }
 
@@ -398,6 +430,24 @@
 
             font-size: 1.8rem;
             line-height: 144.444%;
+        }
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+
+            &::before {
+                content: url("../icon/checkbox-uncheck.svg");
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url("../icon/checkbox-checked.svg");
+            }
         }
     }
 }
