@@ -70,6 +70,9 @@ html.dark {
     --checkbox-label-color: var(--auth-form-main-color);
     --form-placeholder-color: var(--auth-form-main-color);
     --form-border-color: var(--auth-form-main-color);
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.3);
+    --form-select-dialog-bg: #2f3441;
+    --form-option-hover-bg: #292e39;
 
     // Product detail
     --product-detail-page: #292e39;

@@ -441,7 +441,6 @@
 
         <!-- Modal: add new shipping address -->
         <div id="add-new-address" class="modal show">
-            <button class="modal__close">&times;</button>
             <div class="modal__content">
                 <h2 class="modal__heading">Add new shipping address</h2>
                 <div class="modal__body">
@@ -474,7 +473,7 @@
                                         class="form__input"
                                         placeholder="Phone"
                                         required
-                                        minlength="11"
+                                        minlength="10"
                                     />
                                     <img src="./assets/icon/form-warning.svg" alt="" class="form__input-icon-error" />
                                 </div>
@@ -497,16 +496,60 @@
                         </div>
 
                         <div class="form__group">
-                            <label for="city" class="form__label form__label--small">City</label>
+                            <label for="city" class="form__label form__label--small">City/District/Town</label>
                             <div class="form__text-input form__text-input--small">
                                 <input
                                     type="text"
                                     name=""
                                     id="city"
-                                    class="form__input"
                                     placeholder="City/District/Town"
+                                    class="form__input js-toggle"
+                                    toggle-target="#city-dialog"
                                 />
                                 <img src="./assets/icon/form-warning.svg" alt="" class="form__input-icon-error" />
+
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <button
+                                        class="form__close-dialog d-none d-sm-block js-toggle"
+                                        toggle-target="#city-dialog"
+                                    >
+                                        &times;
+                                    </button>
+                                    <div class="form__search">
+                                        <input type="text" placeholder="Search" class="form__search-input" />
+                                        <img src="./assets/icon/search.svg" alt="" class="form__search-icon icon" />
+                                    </div>
+                                    <ul class="form__option-list">
+                                        <li class="form__option">Ba Ria</li>
+                                        <li class="form__option">Bac Lieu</li>
+                                        <li class="form__option">Bao Loc</li>
+                                        <li class="form__option">Bac Giang</li>
+                                        <li class="form__option">Bac Kan</li>
+                                        <li class="form__option">Bac Ninh</li>
+                                        <li class="form__option">Ben Tre</li>
+                                        <li class="form__option">Bien Hoa</li>
+                                        <li class="form__option">Buon Ma Thuot</li>
+                                        <li class="form__option">Ca Mau</li>
+                                        <li class="form__option">Cam Ranh</li>
+                                        <li class="form__option">Cao Bang</li>
+                                        <li class="form__option">Cao Lanh</li>
+                                        <li class="form__option">Cam Pha</li>
+                                        <li class="form__option">Chau Doc</li>
+                                        <li class="form__option">Da Lat</li>
+                                        <li class="form__option">Dien Bien Phu</li>
+                                        <li class="form__option">Dong Ha</li>
+                                        <li class="form__option">Dong Hoi</li>
+                                        <li class="form__option">Dong Xoai</li>
+                                        <li class="form__option">Ha Giang</li>
+                                        <li class="form__option">Ha Long</li>
+                                        <li class="form__option">Ha Tien</li>
+                                        <li class="form__option">Ha Tinh</li>
+                                        <li class="form__option">Hue</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option form__option--current">Ho Chi Minh</li>
+                                    </ul>
+                                </div>
                             </div>
                             <p class="form__error">Phone must be at least 11 characters</p>
                         </div>
