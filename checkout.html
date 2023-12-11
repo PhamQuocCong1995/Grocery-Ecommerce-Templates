@@ -308,23 +308,24 @@
             load("#footer", "./templates/footer.html");
         </script>
 
-        <!-- Modal -->
-        <div id="delete-confirm" class="modal hide">
+        <!-- Modal: confirm remove shopping cart item -->
+        <div id="delete-confirm" class="modal modal--small hide">
+            <button class="modal__close">&times;</button>
             <div class="modal__content">
-                <div class="modal__text">Lorem ipsum dolor sit amet. dolor sit amet.</div>
+                <div class="modal__text">Are you sure you want to delete?</div>
                 <div class="modal__bottom">
-                    <button class="btn btn--text btn--small modal__btn js-toggle" toggle-target="#delete-confirm">
+                    <button class="btn btn--outline btn--small modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
                     </button>
                     <button
-                        class="btn btn--primary btn--small btn--no-margin modal__btn js-toggle"
+                        class="btn btn--primary btn--small btn--no-margin btn--danger modal__btn js-toggle"
                         toggle-target="#delete-confirm"
                     >
-                        Confirm
+                        Delete
                     </button>
                 </div>
             </div>
-            <div class="modal__overlay"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
         </div>
     </body>
 </html>
