@@ -1,0 +1,100 @@
+@use "../abstracts";
+
+.profile {
+    &-container {
+        margin-top: 30px;
+    }
+
+    &__sidebar {
+        padding-bottom: 30px;
+        border-radius: 20px;
+        background: var(--profile-sidebar-bg);
+        box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow-color);
+        overflow: hidden;
+    }
+
+    //User
+    &-user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 35px 20px 20px;
+
+        border-radius: 20px 20px 0px 0px;
+        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%),
+            url("../img/profile/background-cover.png") no-repeat center / cover;
+
+        &__avatar {
+            width: 121px;
+            height: 121px;
+            border-radius: 50%;
+            object-fit: cover;
+
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+            background: #ccc content-box;
+        }
+
+        &__name {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 144.444%;
+            margin-top: 15px;
+        }
+
+        &__desc {
+            color: #fafafd;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+            margin-top: 2px;
+        }
+    }
+
+    &-menu {
+        margin-top: 30px;
+        padding: 0 30px;
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+
+        &__list {
+            margin-top: 11px;
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            height: 32px;
+
+            border-radius: 5px;
+
+            font-size: 1.5rem;
+            line-height: 146.667%;
+            padding: 0 4px;
+            transition: background-color 0.1s;
+
+            &:hover {
+                background: #ebebeb;
+            }
+        }
+
+        &__icon {
+            width: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    }
+}
+
+//End Profile
