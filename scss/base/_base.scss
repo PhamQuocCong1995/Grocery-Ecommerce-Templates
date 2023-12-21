@@ -85,6 +85,6 @@ strong {
 
 .separate {
     height: 1px;
-    background: #d2d1d6;
+    background: var(--separate-color);
     margin: var(--margin) 0;
 }
