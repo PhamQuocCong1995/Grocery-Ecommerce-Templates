@@ -4048,6 +4048,9 @@ html {
   justify-content: space-between;
   gap: 30px;
 }
+.cart-info__back-arrow {
+  padding-right: 10px;
+}
 .cart-info__heading {
   font-size: 2.4rem;
   font-weight: 700;
@@ -4619,6 +4622,21 @@ html {
 }
 .profile__desc {
   margin-bottom: 16px;
+}
+
+.form-card__label {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.form-card__cancel, .form-card__save-card {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
 }
 
 /*# sourceMappingURL=main.css.map */
