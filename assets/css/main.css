@@ -1431,6 +1431,7 @@ html.dark {
   --account-info-bg: #292e39;
   --account-info-icon-bg: #171c28;
   --separate-color: #292e39;
+  --user-menu-link-hover: #292e39;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1506,6 +1507,7 @@ html {
   --account-info-bg: #f6f6f6;
   --account-info-icon-bg: #fff;
   --separate-color: #d2d1d6;
+  --user-menu-link-hover: #ebebeb;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1772,12 +1774,25 @@ html {
   height: 30px;
   background: var(--top-act-group-separate);
 }
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdown {
+  display: block;
+}
 .top-act__avatar {
   display: block;
   width: 50px;
   height: 50px;
   border-radius: 8px;
   cursor: pointer;
+}
+.top-act__dropdown {
+  width: min(300px, 100vw) !important;
+  right: -15px !important;
+}
+.top-act__dropdown-arrow {
+  right: 15px !important;
 }
 
 .nav-btn {
@@ -1803,7 +1818,7 @@ html {
 
 .act-dropdown {
   position: absolute;
-  min-width: min(500px, 100vw);
+  width: min(500px, 100vw);
   top: 48px;
   right: -60px;
   padding-top: 28px;
@@ -1907,6 +1922,41 @@ html {
   font-weight: 500;
   line-height: 146.667%;
   margin-top: 6px;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.user-menu__name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  font-size: 1.8rem;
+}
+.user-menu__link:hover {
+  background: var(--user-menu-link-hover);
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--separate-color);
 }
 
 .footer {
